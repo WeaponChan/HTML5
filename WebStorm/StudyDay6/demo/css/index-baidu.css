@@ -1,0 +1,107 @@
+body{
+    background: url("../source/image/bg.jpg");
+}
+
+/*头部布局*/
+#header{
+    text-align: right;
+}
+
+#header .common{
+    color: #333333;
+    font-size: 13px;
+    font-weight: bolder;
+    width: 45px;
+    height: 32px;
+    margin: 10px;
+}
+
+#header .no-weight{
+    color: #333333;
+    font-size: 13px;
+    width: 45px;
+    height: 32px;
+    margin: 10px;
+}
+
+#header .more-product{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 13px;
+    font-weight: normal;
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+    text-decoration: none;
+    line-height: 32px;
+    text-align: center;
+}
+
+
+/*中间布局*/
+#content{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 500px;
+}
+
+#content img{
+    width: 270px;
+    height: 129px;
+}
+
+#content .search-click{
+    background-color: dodgerblue;
+    color: white;
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    width: 80px;
+    height: 32px;
+    text-decoration: none;
+    line-height: 32px;
+    text-align: center;
+    margin-left: -6px;
+}
+
+#content input{
+    width: 500px;
+    height: 22px;
+    border: 1px solid #d1c5ae;
+    padding-top: 4.5px;
+    padding-bottom: 3px;
+    outline: none;/*去掉阴影*/
+}
+
+#content input:focus{
+    border: 1px solid dodgerblue;
+}
+
+/*尾部布局*/
+#footer{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#footer .set-home,.home-read,.home-opinion{
+    color: #9c9c9c;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#footer span{
+    color: #9c9c9c;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+#footer .home-police{
+    color: #9c9c9c;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+#footer .home-police:hover{
+    text-decoration: underline;
+}

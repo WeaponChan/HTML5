@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器的优先级别</title>
+    <!--css选择器优先级
+        1.在相同级别的选择器：（1）就近原则 （2）叠加原则
+        2.不同级别 ： important > id选择器 > 类选择器 > 标签选择器
+        3.限定范围越小 优先级别越高
+    -->
+    <style>
+
+
+
+        /*复合选择器*/
+        div#main{
+            background-color: gold;
+        }
+
+        /*id选择器*/
+        #main{
+            background-color: yellow;
+        }
+
+        /*类选择器*/
+        .test1{
+            background-color: red;
+        }
+
+        .test2{
+            background-color: purple;
+        }
+
+        /*标签选择器*/
+        div{
+            background-color: blue;
+        }
+        div{
+            background-color: green;
+            width: 100px;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        *{
+            background-color: darkgreen;
+            /*width: 100px !important;*/
+            /*height: 40px !important;*/
+            /*font-size: 30px !important;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="test1 test2">1111111</div>
+</body>
+</html>

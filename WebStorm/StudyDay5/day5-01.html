@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+</head>
+    <style>
+        /*标签选择器 表示方法是 标签*/
+        div{
+            background-color: #4f4f4f;
+            color: #ff6f06;
+        }
+        p{
+            background-color: #6C6C6C;
+            color: #71a403;
+        }
+
+        /*类选择器 表示方法是 .类名*/
+        .class{
+            background-color: #52a0e5;
+            color: #6f161e;
+        }
+        /*id选择器 表示方法是 #id名*/
+        #one{
+            background-color: #c98d46;
+            color: #52a0e5;
+        }
+
+        #two{
+            background-color: #ff4400;
+            color: #e01222;
+        }
+
+        #three{
+            background-color: #db192b;
+            color: chartreuse;
+        }
+        /*并列选择器 ：相当于逻辑或 即符合其中一个条件的皆可以为其设置样式,设置的条件可以用逗号隔开 表示方法是 标签(可以是类(.标签)，也可以是id(#标签)),标签(可以是类(.标签)，也可以是id(#标签))*/
+        div,.appose{
+            background-color: #e7ffb0;
+            color: red;
+        }
+
+        /*复合选择器：相当于逻辑与 即必须符合所有条件的才为其设置样式,注意设置的条件不用逗号隔开 表示方法是 标签(可以是类(.标签)，也可以是id(#标签))标签(可以是类(.标签)，也可以是id(#标签))*/
+        div.recombination{
+            background-color: #f76b1c;
+            color: yellow;
+        }
+
+        /*后代选择器：一个标签的内嵌标签都为其后代 表示方法是 父标签 标签*/
+        #descendant p{
+            background-color: brown;
+            color: blue;
+        }
+        /*直接后代选择器：一个标签的内嵌第一个标签 表示方法是 父标签>子标签*/
+        /*相邻兄弟选择器 ：表示方法是 标签+标签*/
+        /*属性选择器：表示方法是 标签[属性]*/
+        div[name]{
+            background-color: red;
+            color: white;
+        }
+
+        /*伪类 获取到标签属性 改变样式   表示方法是 标签：属性*/
+        #a{
+            background-color: pink;
+            color: black;
+            width: 100px;
+            height: 20px;
+        }
+        /*hover属性就是 当鼠标移动到当前标签的时候*/
+        #a:hover{
+            background-color: black;
+            color: pink;
+        }
+
+        /*标签的类型*/
+        #type{
+            background-color: pink;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+<body>
+    <h2>标签选择器</h2>
+    <div>我是标签选择器示例</div>
+    <p>我也是标签选择器示例</p>
+
+    <h2>类选择器</h2>
+    <div class="class">我是类选择器示例</div>
+    <p class="class">我也是类选择器示例</p>
+
+    <h2>id选择器</h2>
+    <div id="one">我是id选择器示例1</div>
+    <div id="two">我是id选择器示例2</div>
+    <div id="three">我是id选择器示例3</div>
+
+    <h2>并列选择器</h2>
+    <div>我是并列选择器示例</div>
+    <p>我也是并列选择器示例</p>
+    <div class="appose">我是并列选择器示例</div>
+    <p class="appose">我也是并列选择器示例</p>
+
+    <h2>复合选择器</h2>
+    <div>我是复合选择器示例</div>
+    <p>我也是复合选择器示例</p>
+    <div class="recombination">我是复合选择器示例</div>
+    <p class="recombination">我也是复合选择器示例</p>
+
+    <h2>后代选择器</h2>
+    <div id="descendant">
+        <p>我是div儿子
+            <p>我是div孙子</p>
+        </p>
+    </div>
+
+    <h2>属性选择器</h2>
+    <div name="a">我是属性选择器示例1</div>
+    <div age="b">我是属性选择器示例2</div>
+    <div aaa="c">我是属性选择器示例3</div>
+
+    <h2>伪类</h2>
+    <div id="a">我是伪类示例</div>
+
+    <h2>标签的类型</h2>
+    <!--1.块级标签：独占一行  随时设置宽高(例如 div h p ul li等)
+        2.行内标签：多个行内标签可以同一行显示 宽和高取决于内容的尺寸(span a label等)
+        3.行内-块级标签  多个行内-块级标签可以同一行显示 可以设置宽高(input button等)
+    -->
+    <div id="type">我是块级标签</div>
+    <span>我是行内标签</span>
+    <input type="我是行内-块级标签">
+    <h2>修改标签的显示类型</h2>
+    <!--CSS里面的display属性可以修改标签显示类型
+        1.none 隐藏标签
+        2.block 把行内标签变成块标签
+        3.inline 把块级标签变成行内标签
+        4.inline-block 把标签变为行内-块级标签
+    -->
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <!--盒子模型：网页上的每一个标签都是一个盒子 每个盒子都有四个属性
+    1.内容（content）：盒子里面装的东西 通常指的是文字或者图片 height width max_height max_width min_height min_width
+    2.填充（padding 内边距）padding_top padding_right padding_bottom padding_left  上右下左
+    3.边框（border）盒子本身 (5px solid greenyellow  宽度 样式 颜色)
+    4.边界（margin 外边距）上右下左
+    -->
+    <style>
+        div{
+            background-color: red;
+            width: 250px;
+            height: 250px;
+            margin: 20px 20px 20px 20px;/*当上下左右的外边距是一样的时候 我们只需要 直接设置一个 margin: 20px */
+            padding: 50px 20px 20px 20px; /*当上下左右的内边距是一样的时候 我们只需要 直接设置一个 padding: 20px  注意改变内边距的话盒子会跟着变化*/
+            border: 5px solid greenyellow;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>123456</div>
+</body>
+</html>

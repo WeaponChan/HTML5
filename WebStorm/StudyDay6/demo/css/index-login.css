@@ -1,0 +1,84 @@
+body{
+    background-color: #f4f4f4;
+}
+
+#main{
+
+    text-align: center;
+}
+
+#main .content{
+    margin-top: 100px;
+    background-color: white;
+    display: inline-block;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#main .content .account-pwd input{
+     display: block;
+     height: 20px;
+     width: 200px;
+
+     border: 1px solid #f4f4f4;
+}
+
+#main .content .account-pwd input:focus{
+    outline: none;
+    border-color: blue;
+}
+
+#main .content .account-pwd label{
+    display: block;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+#main .content .login{
+    margin-top: 20px;
+
+}
+
+#main button{
+    height: 25px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+}
+
+#main .content .login button{
+    width: 205px;
+    background-color: #13d0a1;
+    border: 1px solid #13d0a1;
+    border-radius: 4px;
+}
+
+#main .content .login button:hover{
+    background-color: white;
+    color: #13d0a1;
+    border: 1px solid #13d0a1;
+    cursor: pointer;
+}
+
+
+#main .register{
+    margin-top: 20px;
+}
+
+#main .register button{
+    width: 180px;
+    background-color: #e43f3b;
+    border: 1px solid #e43f3b;
+    border-radius: 4px;
+}
+
+#main .register button:hover{
+    background-color: white;
+    color: #e43f3b;
+    border: 1px solid #e43f3b;
+    cursor: pointer;
+}
+
+

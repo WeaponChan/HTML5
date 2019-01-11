@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS可继承属性</title>
+    <style>
+        /*所有标签可以继承
+        1.visibility
+        2.cursor
+        */
+         div{
+             /*设置一个背景图片*/
+
+             background: url("img/222222.jpg");/*取图片*/
+             background-size:cover ;/*设置图片覆盖*/
+             width: 200px;
+             height: 100px;
+             font-size: 30px;
+             /*display: none;!*隐藏(包括宽高一起)*!*/
+             /*visibility: hidden;!*纯粹的隐藏 但是占位*!*/
+             cursor: pointer;
+         }
+
+        span{
+            width: 100px;
+            height: 30px;
+            font-size: 30px;
+            line-height: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <span>1111111111</span>
+    </div>
+</body>
+</html>

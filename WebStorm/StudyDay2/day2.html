@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML学习笔记</title>
+</head>
+<body>
+
+<div id="p1"><p>我是第一个段落</p></div>
+
+<button style="background-color: red;font-size:20px;font-weight: lighter" type="button" onclick="myclick()">点我啊</button>
+<script>
+    function myclick() {
+        var p1Text = document.getElementById("p1");
+        alert(p1Text.innerText);
+        alert(p1Text.innerHTML);
+        alert(p1Text.outerHTML);
+    }
+</script>
+<br>
+<label style="background-color: yellow; font-weight: bold; font-size: 16px">我想问你一个问题</label>
+<br>
+<ol type=”I” >         <!--告诉浏览器这是一个有序列表,I表示的是大写罗马数字，默认的是阿拉伯数字。无序列表使用ul元素进行表示-->
+    <li>Introduction</li>
+
+    <li>Part  I
+
+        <ol  type=”A”   start=”2”>        <!--告诉浏览器这是一个有序列表,I表示的是大写罗马数字，默认的是阿拉伯数字-->
+            <li>Description</li>
+            <li>Examples
+                <ol  type=”1”>     <!--在ol标记中添加reversed特性，可以完全反转列表项编号的顺序-->
+                    <li>Reference One</li>
+                    <li>Reference Two</li>
+                </ol>
+
+            </li>
+        </ol>
+    </li>
+
+    <li>Part2</li>
+    <li  value=”6”>Summary</li>      <!--在li标记中添加value特性，可以单独改变某个列表项的编号值-->
+
+</ol>          <!--如果漏掉该结束标记，将把其余文本视为最后一个列表项-->
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签水平、垂直居中</title>
+    <style>
+        .test1{
+            background-color: #f76b1c;
+            width: 300px;
+            height: 300px;
+            text-align: center;/*设置子标签水平居中*/
+            line-height: 300px;/*可以用来设置在父标签中垂直居中*/
+        }
+        span{
+            background-color: #e7ffb0;
+        }
+        button{
+            background-color: #db192b;
+            text-decoration: none;/*去掉按钮下面的横线*/
+        }
+
+        .test2{
+            background-color: yellow;
+            width: 50px;
+            margin: 0px auto;/*前面一个指的上下  后面一个指的左右*/
+        }
+    </style>
+</head>
+<body>
+    <div class="test1">
+        <!--行内标签-->
+        <!--<span>123214124124</span>-->
+        <!--行内块级标签-->
+        <!--<button>百度一下</button>-->
+        <!--以上两种标签均可通过text-align实现在父标签水平居中-->
+        <!--块级标签 是不能通过text-align实现在父标签水平居中 这时候需要使用margin来设置-->
+        <div class="test2">22222</div>
+    </div>
+</body>
+</html>

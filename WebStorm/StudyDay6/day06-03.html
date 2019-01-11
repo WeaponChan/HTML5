@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS布局</title>
+    <!--1.默认情况下网页的标签都是标准流（从上到下）布局
+        2.脱离标准流的方法：（为了改变一些标签在父标签的位置）
+            （1）float属性 float:left：浮动在父标签的最左边
+                         float:right：浮动在父标签的最右边
+            （2）position属性 和left right top bottom属性
+                position 属性值（常用的）：
+                               absolute 生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+                               relative 生成相对定位的元素，相对于其正常位置进行定位。因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+                               static 默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）
+
+                在设置了position属性值过后 ：当要改变子标签在父标签的位置的时候，这时子标签应该设置 position:absolute 但是注意父标签必须设置position:relative 由于position的默认是static 所以子标签的相对位置回去找父标签的父标签，可能就会出现位置错乱
+    -->
+    <style>
+        .one{
+            background-color: red;
+            width: 500px;
+            height: 500px;
+            /*float: right;!*脱离标准流  显示在最右边*!*/
+            position: absolute;
+        }
+
+        .two{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            /*float: left;!*脱离标准流  显示在最左边*!*/
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        ul li{
+            list-style: none;
+            /*display: inline;!*方法一改变列表的竖直显示为横着显示*!*/
+            float: left;
+        }
+
+        /*.three{*/
+            /*background-color: green;*/
+            /*width: 100px;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <!--float属性示例-->
+    <!--<div class="one">11111111</div>-->
+    <!--<div class="two">22222222</div>-->
+    <!--<div class="three">33333333</div>&lt;!&ndash;由于two脱离了标准流显示在最左边 所以跟随在two后面显示&ndash;&gt;-->
+
+    <!--position属性示例-->
+    <!--<div class="one">-->
+        <!--<div class="two">22222222</div>-->
+    <!--</div>-->
+
+
+    <!--float应用小知识  改变列表的竖直显示为横着显示-->
+    <ul>
+        <li>1111111</li>
+        <li>1111111</li>
+        <li>1111111</li>
+        <li>1111111</li>
+    </ul>
+</body>
+</html>
